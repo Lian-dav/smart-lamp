@@ -70,7 +70,7 @@ function circuitSvg(i){
 
 const content = [
 `<div class="slide-inner hero"><div><div class="kicker">Prototype Smart Lamp</div>
-<h1 class="title-long">Prototype Lampu Pintar Berbasis IoT Menggunakan ESP-32 Sebagai Alat Intensitas Cahaya Pada Ruangan yang Mengatur Pencahayaan Saat Belajar di SMA Gunung Madu</h1>
+<h1 class="title-long">Prototipe Lampu Pintar Berbasis IoT Menggunakan ESP-32 Sebagai Alat Pengatur Intensitas Cahaya Pada Ruang Belajar di SMA Gunung Madu</h1>
 <p>Sistem pencahayaan otomatis berdasarkan intensitas cahaya ruangan menggunakan sensor LDR.</p>
 <div class="hero-meta"><span class="pill">Ridho Evrilian</span><span class="pill">XIIB</span>
 <span class="pill">SMA Gunung Madu</span><span class="pill">Miss Adel</span><span class="pill">14 Juli 2026</span></div>
@@ -113,7 +113,8 @@ const content = [
 <p><strong>1.</strong> Sistem yang dibuat hanya difokuskan pada pengaturan intensitas cahaya lampu di dalam ruang belajar SMA Gunung Madu.</p>
 <p><strong>2.</strong> Sensor yang digunakan hanya untuk mendeteksi intensitas cahaya ruangan.</p>
 <p><strong>3.</strong> Sistem bekerja secara otomatis berdasarkan kondisi cahaya di dalam ruangan.</p>
-<p><strong>4.</strong> Pengujian sistem dilakukan dalam skala prototype dan belum diterapkan secara menyeluruh di seluruh ruangan sekolah.</p></div>
+<p><strong>4.</strong> Pengujian sistem dilakukan dalam skala prototype dan belum diterapkan secara menyeluruh di seluruh ruangan sekolah.</p>
+<p><strong>5.</strong> Pengujian alat ini untuk memperkirakan daya yang digunakan berdasarkan nilai PWM.</p></div>
 <div class="card"><div class="number">H</div><h3>Hipotesis</h3><p>Smart Lamp diduga dapat membantu mengurangi masalah pencahayaan pada ruangan SMA Gunung Madu.</p></div>
 </div></div>`,
 
@@ -134,8 +135,8 @@ const content = [
 
 `<div class="slide-inner"><div class="kicker">09 / Penelitian Terdahulu</div><h2>Penelitian Terdahulu</h2>
 <div class="grid-2">
-<div class="card"><div class="number">01</div><h3>Domingos Soares Martins</h3><p>Sistem berhasil mengontrol lampu secara otomatis berdasarkan intensitas cahaya sekitar maupun secara manual melalui tombol.</p></div>
-<div class="card"><div class="number">02</div><h3>Demi Adidrana, Arif Rahman Hakim, Hertanto Suryoprayogo, dan Ilham Roni Yansyah</h3><p>Sistem lampu pintar berbasis ESP32 DevKit dan Ubidots berhasil mengontrol indikator LED berdasarkan cahaya maupun melalui perintah web Ubidots.</p></div>
+<div class="card"><div class="number">01</div><h3>Domingos Soares Martins</h3><p><em>(Pengendalian Lampu Berbasis IoT Menggunakan NodeMCU dan Sensor)</em></p><p>Sistem berhasil mengontrol lampu secara otomatis berdasarkan intensitas cahaya sekitar maupun secara manual melalui tombol.</p></div>
+<div class="card"><div class="number">02</div><h3>Demi Adidrana, Arif Rahman Hakim, Hertanto Suryoprayogo, dan Ilham Roni Yansyah</h3><p><em>(Perancangan Sistem Lampu Pintar Berbasis IoT Menggunakan Ubidots)</em></p><p>Sistem lampu pintar berbasis ESP32 DevKit dan Ubidots berhasil mengontrol indikator LED berdasarkan cahaya maupun melalui perintah web Ubidots.</p></div>
 </div></div>`,
 
 `<div class="slide-inner"><div class="kicker">10 / Desain Penelitian</div><h2>Desain Penelitian</h2>
@@ -145,7 +146,7 @@ const content = [
 <div class="card"><h3>Tempat</h3><p>Lab Fisika SMA Gunung Madu dan di rumah.</p></div>
 <div class="card"><h3>Objek Penelitian</h3><p>Prototype Smart Lamp.</p></div>
 <div class="card"><h3>Variabel Bebas</h3><p>Hanya mengubah sistem menjadi otomatis dengan membaca intensitas cahaya dan mengeluarkan cahaya sesuai dengan intensitas cahaya yang diterima.</p></div>
-<div class="card"><h3>Variabel Terikat</h3><p>Hasil yang diukur berdasarkan intensitas cahaya, lux meter, dan PWM.</p></div>
+<div class="card"><h3>Variabel Terikat</h3><p>Hasil yang diukur berdasarkan nilai LDR dan PWM.</p></div>
 </div>
 <div class="card" style="margin-top:16px"><h3>Variabel Terkontrol</h3><p>Yang sama hanya sakelarnya on/off, sama seperti lampu pada umumnya.</p></div>
 </div>`,
@@ -180,7 +181,7 @@ const content = [
 
 `<div class="slide-inner"><div class="kicker">13 / Pengumpulan Data</div><h2>Teknik Pengumpulan Data</h2>
 <div class="grid-3">
-<div class="card"><div class="number">01</div><h3>Jenis Data</h3><p>Data primer.</p><p>Mengukur intensitas cahaya, melihat nilai PWM, dan menguji lampu di kondisi yang berbeda.</p></div>
+<div class="card"><div class="number">01</div><h3>Jenis Data</h3><p>Data primer.</p><p>Mengukur nilai LDR, melihat PWM, dan menguji lampu di kondisi yang berbeda.</p></div>
 <div class="card"><div class="number">02</div><h3>Instrumen</h3><p>LDR sensor, ESP32, dan Serial Monitor Arduino IDE.</p></div>
 <div class="card"><div class="number">03</div><h3>Cara Pengambilan Data</h3><p>Mengambil data dilakukan dengan memberikan cahaya ke sensor LDR dari cahaya flash HP untuk melihat perubahan intensitas cahaya yang  diterima.</p></div>
 </div></div>`,
@@ -290,7 +291,7 @@ P = 0.0507 Wh / 0.0151 jam
 
 `<div class="slide-inner"><div class="kicker">17 / Pembahasan</div><h2>Pembahasan</h2>
 <div class="grid-3">
-<div class="card"><div class="number">01</div><h3>Apa Hasil Utamanya?</h3><p>Terdapat hubungan antara PWM dan lux yang sesuai. PWM berkurang jika menerima cahaya yang terang, dan PWM akan bertambah jika menerima cahaya yang kurang.</p></div>
+<div class="card"><div class="number">01</div><h3>Apa Hasil Utamanya?</h3><p>Terdapat hubungan antara PWM dan nilai LDR yang sesuai. PWM berkurang jika menerima cahaya yang terang, dan PWM akan bertambah jika menerima cahaya yang kurang.</p></div>
 <div class="card"><div class="number">02</div><h3>Mengapa Bisa Terjadi?</h3><p>Karena sensor LDR akan menerima cahaya sebagai input yang akan dikirim ke ESP32 sebagai proses, kemudian dikeluarkan melalui lampu sebagai cahaya atau output.</p></div>
 <div class="card"><div class="number">03</div><h3>Perbandingan dengan Peneliti Sebelumnya</h3><p>Domingos Soares Martins membuat smart lamp berbasis NodeMCU dengan sensor LDR berbasis IoT yang dapat dikendalikan dari jarak jauh dan efisien dalam penggunaan energi.</p><p>Penelitian saya menggunakan IoT yang juga mengontrol lampu secara otomatis, dapat dikendalikan dari jarak jauh dan dapat menghemat energi, serta dapat mengetahui energi yang digunakan dan berapa daya yang dipakai.</p></div>
 </div></div>`,
