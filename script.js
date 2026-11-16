@@ -234,11 +234,11 @@ P = 0.0507 Wh / 0.0151 jam
 <div class="grid-2 equal">
 <div class="card"><h3>Data Uji Coba</h3>
 <div class="table-wrap"><table class="data-table compact">
-<thead><tr><th>No.</th><th>Kondisi Lampu</th><th class="num">Intensitas Cahaya</th><th class="num">Nilai PWM</th><th class="num">Daya</th></tr></thead>
+<thead><tr><th>No.</th><th>Kondisi Lampu</th><th class="num">Intensitas Cahaya</th><th class="num">Nilai PWM</th><th class="num">Watt</th></tr></thead>
 <tbody>
-<tr><td>01</td><td>Terang</td><td class="num">100</td><td class="num">250</td><td class="num">8</td></tr>
-<tr><td>02</td><td>Redup</td><td class="num">60</td><td class="num">140</td><td class="num">4</td></tr>
-<tr><td>03</td><td>Gelap</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td>01</td><td>Terang</td><td class="num">±83</td><td class="num">±26</td><td class="num">±1</td></tr>
+<tr><td>02</td><td>Redup</td><td class="num">±48</td><td class="num">±131</td><td class="num">±4</td></tr>
+<tr><td>03</td><td>Gelap</td><td class="num">±13</td><td class="num">±291</td><td class="num">±7</td></tr>
 </tbody></table></div>
 <h3 class="sub">Energi Harian (Wh)*</h3>
 <div class="chips"><span class="chip"><i>2026-10-09</i>2.8</span><span class="chip"><i>2026-10-10</i>0.12</span><span class="chip"><i>2026-10-11</i>0.75</span><span class="chip"><i>2026-10-13</i>0.11</span></div>
@@ -374,16 +374,40 @@ function createSlides(){
   slides = document.querySelectorAll(".slide");
 }
 
+const NAV_SLOTS = 5, NAV_RADIUS = 66;
 function createNav(){
   navEl.innerHTML = "";
-  titles.forEach((label, i) => {
+  for (let k = 0; k < NAV_SLOTS; k++){
+    const ang = (-90 + k * 72) * Math.PI / 180;
     const btn = document.createElement("button");
     btn.className = "nav-item";
-    btn.dataset.index = i;
-    btn.innerHTML = `<span class="nav-index">${String(i+1).padStart(2,"0")}</span><span class="nav-label">${label}</span>`;
-    btn.addEventListener("click", () => goToSlide(i));
+    btn.style.setProperty("--i", k);
+    btn.style.setProperty("--x", (Math.cos(ang) * NAV_RADIUS).toFixed(1) + "px");
+    btn.style.setProperty("--y", (Math.sin(ang) * NAV_RADIUS).toFixed(1) + "px");
+    btn.innerHTML = `<span class="nav-index"></span>`;
+    btn.addEventListener("click", () => goToSlide(Number(btn.dataset.index)));
     navEl.appendChild(btn);
+  }
+}
+let navStart = -1;
+function updateNavRing(){
+  /* tombol di sekeliling menampilkan 5 slide setelah slide sekarang: sekarang 1 -> 2,3,4,5,6 */
+  const fabNum = document.getElementById("fabNum");
+  if (fabNum) fabNum.textContent = currentSlide + 1;
+  const items = navEl.querySelectorAll(".nav-item");
+  items.forEach((btn, k) => {
+    const idx = currentSlide + 1 + k;
+    if (idx >= titles.length){ btn.hidden = true; return; }
+    btn.hidden = false;
+    btn.dataset.index = idx;
+    btn.title = `${idx + 1}. ${titles[idx]}`;
+    btn.setAttribute("aria-label", `Slide ${idx + 1}: ${titles[idx]}`);
+    btn.firstElementChild.textContent = idx + 1;
   });
+  if (navStart !== currentSlide){
+    navStart = currentSlide;
+    items.forEach(btn => { btn.classList.remove("pop"); void btn.offsetWidth; btn.classList.add("pop"); });
+  }
 }
 
 function updateUI(){
@@ -392,9 +416,7 @@ function updateUI(){
   progressEl.style.width = `${(pos/slides.length)*100}%`;
   prevBtn.disabled = currentSlide === 0;
   nextBtn.disabled = currentSlide === slides.length - 1;
-  document.querySelectorAll(".nav-item").forEach(item => {
-    item.classList.toggle("active", Number(item.dataset.index) === currentSlide);
-  });
+  updateNavRing();
 }
 
 /* ---- transisi sobekan kertas biru: maju = terbelah, mundur = menyatu kembali ---- */
@@ -1365,11 +1387,8 @@ themeBtn.addEventListener("click", () => {
   applyTheme(saved);
 })();
 
-/* sidebar collapse */
-collapseBtn.addEventListener("click", () => {
-  const collapsed = appShell.classList.toggle("collapsed");
-  collapseBtn.textContent = collapsed ? "›" : "‹";
-});
+/* tombol utama: klik = mundur satu slide */
+collapseBtn.addEventListener("click", () => { if (currentSlide > 0) goToSlide(currentSlide - 1); });
 
 /* lightbox: carousel untuk foto dokumentasi + mode gambar tunggal (mis. flowchart) */
 const photoLabels = ["FOTO 1","FOTO 2","FOTO 3","FOTO 4"];
