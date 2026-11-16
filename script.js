@@ -1431,7 +1431,7 @@ function openImageViewer(src, caption){
 /* latar glitch cyan: bar horizontal bergaris yang muncul, bergeser, lalu memudar */
 const glitchCanvas = document.getElementById("glitchCanvas");
 const gctx = glitchCanvas.getContext("2d");
-const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const reduceMotion = false; /* animasi selalu aktif, tidak mengikuti pengaturan "kurangi animasi" milik sistem */
 let glitchRaf = null, glitchLast = 0, glitchBars = [];
 
 function sizeGlitch(){
