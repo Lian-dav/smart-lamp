@@ -374,7 +374,7 @@ function createSlides(){
   slides = document.querySelectorAll(".slide");
 }
 
-const NAV_SLOTS = 5, NAV_RADIUS = 66;
+const NAV_SLOTS = 5, NAV_RADIUS = 40;
 function createNav(){
   navEl.innerHTML = "";
   for (let k = 0; k < NAV_SLOTS; k++){
