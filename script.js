@@ -240,39 +240,36 @@ P = 0.0507 Wh / 0.0151 jam
 <tr><td>02</td><td>Redup</td><td class="num">±48</td><td class="num">±131</td><td class="num">±4</td></tr>
 <tr><td>03</td><td>Gelap</td><td class="num">±13</td><td class="num">±219</td><td class="num">±7</td></tr>
 </tbody></table></div>
-<h3 class="sub">Energi Harian (Wh)*</h3>
-<div class="chips"><span class="chip"><i>2026-10-09</i>2.8</span><span class="chip"><i>2026-10-10</i>0.12</span><span class="chip"><i>2026-10-11</i>0.75</span><span class="chip"><i>2026-10-13</i>0.11</span></div>
 </div>
 <div class="card"><h3>Riwayat Tersimpan</h3>
 <div class="table-scroll tall" style="max-height:165px"><table class="data-table compact">
-<thead><tr><th>Waktu</th><th class="num">Cahaya</th><th class="num">Daya</th><th class="num">Watt</th><th class="num">Status</th></tr></thead>
+<thead><tr><th>Waktu</th><th class="num">Cahaya</th><th class="num">Daya</th><th class="num">PWM</th><th class="num">Watt</th><th class="num">Status</th></tr></thead>
 <tbody>
-<tr><td>10.36.16</td><td class="num">83%</td><td class="num">11%</td><td class="num">0.8</td><td class="num">ON</td></tr>
-<tr><td>10.36.13</td><td class="num">1%</td><td class="num">99%</td><td class="num">7.9</td><td class="num">ON</td></tr>
-<tr><td>10.36.10</td><td class="num">0%</td><td class="num">100%</td><td class="num">8.0</td><td class="num">ON</td></tr>
-<tr><td>10.36.07</td><td class="num">81%</td><td class="num">12%</td><td class="num">0.9</td><td class="num">ON</td></tr>
-<tr><td>10.36.03</td><td class="num">100%</td><td class="num">0%</td><td class="num">0.0</td><td class="num">OFF</td></tr>
-<tr><td>10.36.00</td><td class="num">97%</td><td class="num">2%</td><td class="num">0.1</td><td class="num">ON</td></tr>
-<tr><td>10.35.57</td><td class="num">82%</td><td class="num">11%</td><td class="num">0.9</td><td class="num">ON</td></tr>
-<tr><td>10.35.54</td><td class="num">100%</td><td class="num">0%</td><td class="num">0.0</td><td class="num">OFF</td></tr>
-<tr><td>10.35.52</td><td class="num">83%</td><td class="num">11%</td><td class="num">0.8</td><td class="num">ON</td></tr>
-<tr><td>10.35.49</td><td class="num">86%</td><td class="num">9%</td><td class="num">0.7</td><td class="num">ON</td></tr>
-<tr><td>10.35.45</td><td class="num">86%</td><td class="num">9%</td><td class="num">0.7</td><td class="num">ON</td></tr>
-<tr><td>10.35.42</td><td class="num">67%</td><td class="num">33%</td><td class="num">2.6</td><td class="num">ON</td></tr>
-<tr><td>10.35.40</td><td class="num">84%</td><td class="num">10%</td><td class="num">0.8</td><td class="num">ON</td></tr>
-<tr><td>10.35.36</td><td class="num">86%</td><td class="num">9%</td><td class="num">0.7</td><td class="num">ON</td></tr>
-<tr><td>10.35.33</td><td class="num">85%</td><td class="num">9%</td><td class="num">0.8</td><td class="num">ON</td></tr>
+<tr><td>11.05.45</td><td class="num">85%</td><td class="num">9%</td><td class="num">24</td><td class="num">0.8</td><td class="num">ON</td></tr>
+<tr><td>11.05.42</td><td class="num">89%</td><td class="num">7%</td><td class="num">17</td><td class="num">0.5</td><td class="num">ON</td></tr>
+<tr><td>11.05.39</td><td class="num">84%</td><td class="num">10%</td><td class="num">25</td><td class="num">0.8</td><td class="num">ON</td></tr>
+<tr><td>11.05.36</td><td class="num">87%</td><td class="num">8%</td><td class="num">20</td><td class="num">0.6</td><td class="num">ON</td></tr>
+<tr><td>11.05.33</td><td class="num">87%</td><td class="num">8%</td><td class="num">20</td><td class="num">0.6</td><td class="num">ON</td></tr>
+<tr><td>11.05.30</td><td class="num">88%</td><td class="num">7%</td><td class="num">19</td><td class="num">0.6</td><td class="num">ON</td></tr>
+<tr><td>11.05.28</td><td class="num">88%</td><td class="num">7%</td><td class="num">19</td><td class="num">0.6</td><td class="num">ON</td></tr>
+<tr><td>11.05.24</td><td class="num">75%</td><td class="num">16%</td><td class="num">40</td><td class="num">1.3</td><td class="num">ON</td></tr>
+<tr><td>11.05.24</td><td class="num">73%</td><td class="num">17%</td><td class="num">43</td><td class="num">1.4</td><td class="num">ON</td></tr>
+<tr><td>11.05.20</td><td class="num">74%</td><td class="num">16%</td><td class="num">41</td><td class="num">1.3</td><td class="num">ON</td></tr>
+<tr><td>11.05.16</td><td class="num">81%</td><td class="num">12%</td><td class="num">30</td><td class="num">0.9</td><td class="num">ON</td></tr>
+<tr><td>11.05.11</td><td class="num">82%</td><td class="num">11%</td><td class="num">28</td><td class="num">0.9</td><td class="num">ON</td></tr>
+<tr><td>11.05.08</td><td class="num">82%</td><td class="num">11%</td><td class="num">28</td><td class="num">0.9</td><td class="num">ON</td></tr>
+<tr><td>11.05.05</td><td class="num">89%</td><td class="num">7%</td><td class="num">17</td><td class="num">0.5</td><td class="num">ON</td></tr>
+<tr><td>11.05.02</td><td class="num">85%</td><td class="num">9%</td><td class="num">24</td><td class="num">0.8</td><td class="num">ON</td></tr>
 </tbody></table></div>
-<h3 class="sub">Hubungan Cahaya, Daya, Watt &amp; Status</h3>
+<h3 class="sub">Hubungan Cahaya, Daya, PWM, Watt &amp; Status</h3>
 <table class="data-table compact">
-<thead><tr><th>Cahaya</th><th class="num">Daya</th><th class="num">Watt</th><th class="num">Status</th></tr></thead>
+<thead><tr><th>Kondisi</th><th class="num">Cahaya</th><th class="num">Daya</th><th class="num">PWM</th><th class="num">Watt</th><th class="num">Status</th></tr></thead>
 <tbody>
-<tr><td>0–1% (gelap)</td><td class="num">99–100%</td><td class="num">7.9–8.0</td><td class="num">ON</td></tr>
-<tr><td>67% (redup)</td><td class="num">33%</td><td class="num">2.6</td><td class="num">ON</td></tr>
-<tr><td>81–86% (terang)</td><td class="num">9–12%</td><td class="num">0.7–0.9</td><td class="num">ON</td></tr>
-<tr><td>100% (sangat terang)</td><td class="num">0%</td><td class="num">0.0</td><td class="num">OFF</td></tr>
+<tr><td>Terang</td><td class="num">73–89% (±83)</td><td class="num">7–17%</td><td class="num">17–43 (±26)</td><td class="num">0.5–1.4 (±1)</td><td class="num">ON</td></tr>
+<tr><td>Redup</td><td class="num">±48%</td><td class="num">≈51%</td><td class="num">±131</td><td class="num">±4</td><td class="num">ON</td></tr>
+<tr><td>Gelap</td><td class="num">±13%</td><td class="num">≈86%</td><td class="num">±219</td><td class="num">±7</td><td class="num">ON</td></tr>
 </tbody></table>
-<p class="note" style="margin-top:6px">Makin terang cahaya, makin kecil daya dan watt. Pada cahaya 100% daya 0% dan lampu OFF.</p>
+<p class="note" style="margin-top:6px">Makin terang cahaya, makin kecil PWM, daya, dan watt; makin gelap, makin besar. Riwayat tersimpan = kondisi terang (±83), sesuai data uji coba.</p>
 </div>
 </div></div>`,
 
