@@ -293,7 +293,7 @@ P = 0.0507 Wh / 0.0151 jam
 <div class="grid-3">
 <div class="card"><div class="number">01</div><h3>Apa Hasil Utamanya?</h3><p>Terdapat hubungan antara PWM dan nilai LDR yang sesuai. PWM berkurang jika menerima cahaya yang terang, dan PWM akan bertambah jika menerima cahaya yang kurang.</p></div>
 <div class="card"><div class="number">02</div><h3>Mengapa Bisa Terjadi?</h3><p>Karena sensor LDR akan menerima cahaya sebagai input yang akan dikirim ke ESP32 sebagai proses, kemudian dikeluarkan melalui lampu sebagai cahaya atau output.</p></div>
-<div class="card"><div class="number">03</div><h3>Perbandingan dengan Peneliti Sebelumnya</h3><p>Domingos Soares Martins membuat smart lamp berbasis NodeMCU dengan sensor LDR berbasis IoT yang dapat dikendalikan dari jarak jauh dan efisien dalam penggunaan energi.</p><p>Penelitian saya menggunakan IoT yang juga mengontrol lampu secara otomatis, dapat dikendalikan dari jarak jauh dan dapat menghemat energi, serta dapat mengetahui energi yang digunakan dan berapa daya yang dipakai.</p></div>
+<div class="card"><div class="number">03</div><h3>Perbandingan dengan Peneliti Sebelumnya</h3><p>Domingos Soares Martins membuat smart lamp berbasis NodeMCU dengan sensor LDR berbasis IoT yang dapat dikendalikan dari jarak jauh dan efisien dalam penggunaan energi.</p><p>Penelitian saya menggunakan IoT yang juga mengontrol lampu secara otomatis, dapat dikendalikan dari jarak jauh dan bisa diatur wattnya secara manual oleh pengguna agar lebih efisien dalam mengatur tingkat keterangan pada lampu sesuai kenyamanan.</p></div>
 </div></div>`,
 
 `<div class="slide-inner"><div class="kicker">18 / Kesimpulan & Saran</div><h2>Kesimpulan & Saran</h2>
