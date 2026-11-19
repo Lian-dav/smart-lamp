@@ -128,7 +128,7 @@ const content = [
 `<div class="slide-inner"><div class="kicker">08 / Landasan Teori</div><h2>Landasan Teori</h2>
 <div class="grid-3 five">
 <div class="card"><div class="number">01</div><h3>ESP32</h3><p>ESP32 adalah sebuah mikrokontroler yang merupakan penerus ESP8266. Pada ESP32 tersedia Wi-Fi untuk mendukung alat IoT.</p><p><strong>(Asy Syamsbeta, 2021)</strong></p></div>
-<div class="card"><div class="number">02</div><h3>Cahaya</h3><p>Cahaya merupakan sumber kehidupan. Tanpa adanya cahaya kemungkinan tidak akan ada sebuah kehidupan. Jika tidak ada cahaya, bumi akan menjadi dingin dan gelap gulita.</p><p><strong>(Damayanthi dan Kadarismani, 2012)</strong></p></div>
+<div class="card"><div class="number">02</div><h3>Cahaya</h3><p>Cahaya merupakan sumber kehidupan. Tanpa adanya cahaya kemungkinan tidak akan ada sebuah kehidupan. Jika tidak ada cahaya, bumi akan menjadi dingin dan gelap gulita.</p><p><strong>(Damayanthi dan Kadarisman, 2017)</strong></p></div>
 <div class="card"><div class="number">03</div><h3>Lampu Pintar</h3><p>Lampu pintar adalah lampu yang bisa dikendalikan secara otomatis melalui IoT.</p><p><strong>(Djaeng dan Astutik, 2017)</strong></p></div>
 <div class="card"><div class="number">04</div><h3>IoT</h3><p>Kemampuan berbagai device yang bisa saling terhubung dan saling bertukar data melalui jaringan internet.</p><p><strong>(Hardyanto, R. H., 2017)</strong></p></div>
 <div class="card"><div class="number">05</div><h3>Sensor LDR</h3><p>LDR (Light Dependent Resistor) adalah komponen resistor yang nilai hambatannya berubah menurut intensitas cahaya yang diterima.</p><p><strong>(Desmira dkk., 2022)</strong></p></div>
@@ -238,7 +238,7 @@ P = 0.0507 Wh / 0.0151 jam
 <tbody>
 <tr><td>01</td><td>Terang</td><td class="num">±83</td><td class="num">±26</td><td class="num">±1</td></tr>
 <tr><td>02</td><td>Redup</td><td class="num">±48</td><td class="num">±131</td><td class="num">±4</td></tr>
-<tr><td>03</td><td>Gelap</td><td class="num">±13</td><td class="num">±291</td><td class="num">±7</td></tr>
+<tr><td>03</td><td>Gelap</td><td class="num">±13</td><td class="num">±219</td><td class="num">±7</td></tr>
 </tbody></table></div>
 <h3 class="sub">Energi Harian (Wh)*</h3>
 <div class="chips"><span class="chip"><i>2026-10-09</i>2.8</span><span class="chip"><i>2026-10-10</i>0.12</span><span class="chip"><i>2026-10-11</i>0.75</span><span class="chip"><i>2026-10-13</i>0.11</span></div>
